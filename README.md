@@ -2,10 +2,6 @@ TetrisPy 🎮
 
 A professional Tetris clone built with Python and Pygame featuring multiple difficulty levels, high score tracking, and particle effects.
 
-https://img.shields.io/badge/Python-3.8%252B-blue
-https://img.shields.io/badge/Pygame-2.5.1-green
-https://img.shields.io/badge/License-MIT-yellow
-
 Features ✨
 
     🎯 Multiple Difficulty Levels: Easy, Medium, Hard, Extreme
