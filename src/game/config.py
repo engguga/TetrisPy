@@ -14,6 +14,11 @@ class GameConfig:
                     data = json.load(f)
                     self.high_score = data.get('high_score', 0)
                     self.default_difficulty = data.get('difficulty', 'medium')
+                    self.current_theme = data.get('theme', 'default')
+                    self.music_volume = data.get('music_volume', 0.5)
+                    self.sfx_volume = data.get('sfx_volume', 0.7)
+                    self.music_enabled = data.get('music_enabled', True)
+                    self.sfx_enabled = data.get('sfx_enabled', True)
                     self.velocities = data.get('velocities', {
                         'easy': 800, 'medium': 500, 'hard': 300, 'extreme': 150
                     })
@@ -25,6 +30,11 @@ class GameConfig:
     def default_config(self):
         self.high_score = 0
         self.default_difficulty = 'medium'
+        self.current_theme = 'default'
+        self.music_volume = 0.5
+        self.sfx_volume = 0.7
+        self.music_enabled = True
+        self.sfx_enabled = True
         self.velocities = {
             'easy': 800,
             'medium': 500,
@@ -37,6 +47,11 @@ class GameConfig:
         data = {
             'high_score': self.high_score,
             'difficulty': self.default_difficulty,
+            'theme': self.current_theme,
+            'music_volume': self.music_volume,
+            'sfx_volume': self.sfx_volume,
+            'music_enabled': self.music_enabled,
+            'sfx_enabled': self.sfx_enabled,
             'velocities': self.velocities,
             'last_updated': datetime.now().isoformat()
         }
